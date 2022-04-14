@@ -11,7 +11,7 @@ uid: security/authorization/simple
 
 <a name="security-authorization-simple"></a>
 
-Authorization in ASP.NET Core is controlled with <xref:Microsoft.AspNetCore.Authorization.AuthorizeAttribute> and its various parameters. In its most basic form, applying the `[Authorize]` attribute to a controller, action, or Razor Page, limits access to that component authenticated users.
+Authorization in ASP.NET Core is controlled with <xref:Microsoft.AspNetCore.Authorization.AuthorizeAttribute> and its various parameters. In its most basic form, applying the `[Authorize]` attribute to a controller, action, or Razor Page, limits access to that component to authenticated users.
 
 The following code limits access to the `AccountController` to authenticated users:
 
@@ -29,7 +29,7 @@ public class AccountController : Controller
 }
 ```
 
-If you want to apply authorization to an action rather than the controller, apply the `AuthorizeAttribute` attribute to the action itself:
+If you want to apply authorization to an action rather than the controller, apply the `[Authorize]` attribute to the action itself:
 
 ```csharp
 public class AccountController : Controller
